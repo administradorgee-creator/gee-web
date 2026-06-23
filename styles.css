@@ -1,0 +1,410 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f7fb;
+}
+
+/* MENU */
+
+.menu{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 60px;
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+}
+
+.menu-logo{
+    display:flex;
+    align-items:center;
+}
+
+.menu-logo img{
+    height:55px;
+    width:auto;
+    display:block;
+}
+
+.menu ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#003366;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#0077ff;
+}
+
+/* HERO */
+
+.hero{
+    background:
+    linear-gradient(
+    135deg,
+    #001f4d 0%,
+    #003b8e 25%,
+    #005fc4 60%,
+    #79c5ff 100%);
+
+    min-height:700px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:60px 20px;
+}
+
+.logo{
+    width:420px;
+    max-width:90%;
+    margin-bottom:30px;
+}
+
+.hero h1{
+    font-size:65px;
+    margin-bottom:25px;
+    text-shadow:0 3px 15px rgba(0,0,0,.35);
+}
+
+.hero p{
+    font-size:24px;
+    max-width:900px;
+    margin:auto;
+    line-height:1.7;
+}
+
+.boton{
+    margin-top:40px;
+    display:inline-block;
+    padding:16px 35px;
+    border-radius:40px;
+    background:white;
+    color:#003366;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+    transition:.3s;
+}
+
+.boton:hover{
+    transform:translateY(-3px);
+}
+
+/* SERVICIOS */
+
+#servicios{
+    padding:90px 30px;
+}
+
+#servicios h2{
+    text-align:center;
+    color:#003366;
+    font-size:42px;
+    margin-bottom:60px;
+}
+
+.contenedor-servicios{
+    max-width:1300px;
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:25px;
+}
+
+.tarjeta{
+    background:white;
+
+    padding:40px 30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    min-height:260px;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.10);
+
+    transition:.3s;
+}
+
+.tarjeta:hover{
+    transform:translateY(-8px);
+}
+
+.tarjeta h3{
+    color:#003366;
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.tarjeta p{
+    line-height:1.7;
+    color:#444;
+}
+
+/* NOSOTROS */
+
+.nosotros{
+
+    background:
+    linear-gradient(
+    135deg,
+    #001f4d,
+    #003b8e,
+    #005fc4);
+
+    color:white;
+
+    text-align:center;
+
+    padding:100px 30px;
+}
+
+.nosotros h2{
+    font-size:42px;
+    margin-bottom:30px;
+}
+
+.nosotros p{
+    max-width:1000px;
+    margin:auto;
+    line-height:1.9;
+    font-size:20px;
+}
+
+/* CONTACTO */
+
+.contacto{
+    background:#001a40;
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.contacto h2{
+    font-size:40px;
+    margin-bottom:25px;
+}
+
+.contacto p{
+    margin:15px 0;
+    font-size:20px;
+}
+
+/* BOTONES FLOTANTES */
+
+.flotantes{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:12px;
+
+    z-index:9999;
+}
+
+.flotantes a{
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+    text-decoration:none;
+
+    font-size:28px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.30);
+
+    transition:.3s;
+}
+
+.flotantes a:hover{
+    transform:scale(1.1);
+}
+
+.whatsapp{
+    background:#25D366;
+}
+
+.instagram{
+    background:#E1306C;
+}
+
+.tiktok{
+    background:#000000;
+}
+
+.correo{
+    background:#0077ff;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+    .contenedor-servicios{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .hero h1{
+        font-size:50px;
+    }
+
+    .hero p{
+        font-size:20px;
+    }
+}
+
+@media(max-width:700px){
+
+    .menu{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .contenedor-servicios{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:550px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .logo{
+        width:280px;
+    }
+}
+/* MISION - VISION - VALORES */
+
+.nosotros h2{
+    font-size:42px;
+    margin-bottom:25px;
+    margin-top:25px;
+}
+
+.nosotros p{
+    max-width:1100px;
+    margin:auto;
+    line-height:1.9;
+    font-size:20px;
+}
+
+.nosotros strong{
+    color:#79c5ff;
+}
+/* BOTON TRABAJA CON NOSOTROS */
+
+.trabaja-nosotros{
+    position:fixed;
+    left:0;
+    top:30%;
+    z-index:9999;
+}
+
+.trabaja-nosotros a{
+
+    display:block;
+
+    background:rgba(0,51,102,.55);
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px 8px;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    text-align:center;
+
+    border-radius:0 10px 10px 0;
+
+    transition:.3s;
+
+    backdrop-filter:blur(5px);
+
+    box-shadow:0 4px 12px rgba(0,0,0,.20);
+}
+
+.trabaja-nosotros a:hover{
+
+    background:rgba(0,119,255,.85);
+
+    padding-right:15px;
+
+}
+
+/* MEJORA VISUAL DE VALORES */
+
+.nosotros strong{
+    color:#79c5ff;
+}
+
+/* AJUSTE PARA MUCHAS TARJETAS */
+
+.tarjeta{
+    min-height:280px;
+}
+/* JUSTIFICAR TEXTOS */
+.tarjeta p{
+    text-align:center;
+    line-height:1.8;
+}
+
+.nosotros p{
+    text-align:justify;
+    line-height:1.9;
+}
